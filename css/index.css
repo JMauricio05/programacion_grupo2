@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.titulo {
+    margin: 12px;
+    margin-left: 12px;
+    margin-top: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin: 12px 6px;
+    margin: 2px 4px 8px 16px;
+    margin-block: 15px;
+    margin-inline: 20px;
+    margin-block-start: 16px;
+    margin-block-end: 18px;
+    margin-inline-start: 10px;
+    margin-inline-end: 12px;
+
+    padding: 8px;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding: 12px 6px;
+    padding: 2px 4px 8px 16px;
+    padding-block: 15px;
+    padding-inline: 20px;
+
+    border: 1px solid #000000;
+    border-top: 5px solid rgba(50, 125, 250, 1);
+    border-bottom-color: #ff0000;
+    border-color: green #ff0000 rgba(50, 125, 250, 1) rgba(50, 125, 250, 1);
+    border-width: 2px 4px 8px 16px;
+    border-radius: 24px;
+    border-radius: 50%;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+/* .titulo{
+    background-color: #ee82ee;
+}
+
+#tituloPrincipal{
+    font-style: italic;
+} */
