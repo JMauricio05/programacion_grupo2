@@ -1,0 +1,61 @@
+.circulo {
+  width: 80px;
+  height: 80px;
+  background-color: #0000ff;
+  border-radius: 50%;
+  transition-property: background, width;
+  transition-duration: 2s, 500ms;
+  transition-delay: 2s, 0s;
+  transition-timing-function: ease;
+  transition: background 2s 2s ease, width 500ms 0s ease-in-out;
+}
+
+.circulo:hover {
+  background-color: #ff0000;
+  box-shadow: 14px 8px 12px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  width: 240px;
+  transition-delay: 0s;
+}
+
+.animacion {
+  position: fixed;
+  left: -100px;
+  top: -100px;
+  background-color: #ff0000;
+  animation-name: ejemplo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  /* animation-fill-mode: backwards; */
+}
+
+@keyframes ejemplo {
+  /* from {
+    left: 0px;
+    top: 0px;
+  }
+  to {
+    left: calc(100vw - 80px);
+    top: calc(100vh - 80px);
+  } */
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25%{
+    background-color: #00ff00;
+  }
+  50%{
+    border-radius: 0px;
+  }
+  75%{
+    background-color: #0000ff;
+  }
+  100% {
+    left: calc(100vw - 80px);
+    top: calc(100vh - 80px);
+  }
+}

@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    /* grid-template-columns: 100PX  calc(100% / 7)  auto  calc(100% / 7)  calc(100% / 7)  calc(100% / 7)  calc(100% / 7); */
+    /* grid-template-columns: repeat(7, calc(100% / 7)); */
+    grid-template-columns: repeat(7, 100px); 
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: "h h h h . n n"
+    "h h h h . n n"
+    "s s s s s s s"
+    "s s s s s s s"
+    "s s s s s s s"
+    "pepe pepe pepe pepe pepe pepe pepe"
+    "pepe pepe pepe pepe pepe pepe pepe";
+}
+
+header{
+    background-color: #00ffff;
+    grid-area: h;
+}
+
+nav{
+    background-color: #8a2be2;
+    grid-area: n;
+}
+
+section{
+    background-color: #5f9ea0;
+    grid-area: s;
+}
+
+footer{
+    background-color: #767676;
+    grid-area: pepe;
+}
