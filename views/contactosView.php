@@ -18,7 +18,13 @@ class ContactosViews
         $rows = '';
         $contactos = $this->controller->getAllContactos();
         if (count($contactos) > 0) {
-            //falta leer los datos
+            foreach ($contactos as $contacto) {
+                $rows .= '<tr>';
+                $rows .= '   <td>'.$contacto->get('nombre').'</td>';
+                $rows .= '   <td>'.$contacto->get('email').'</td>';
+                $rows .= '   <td>'.$contacto->get('telefono').'</td>';
+                $rows .= '</tr>';
+            }
         } else {
             $rows .= '<tr>';
             $rows .= '   <td colspan="3">No hay datos registrados</td>';

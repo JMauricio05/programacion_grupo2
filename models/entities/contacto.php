@@ -22,12 +22,13 @@ class Contacto
         return $this->{$prop};
     }
 
-    static function all() {
+    static function all()
+    {
         $sql = ContactosQueries::selectAll();
         $db = new EjemploDb();
         $result = $db->query($sql);
         $contactos = [];
-        while($row=$result->fetch_assoc()){
+        while ($row = $result->fetch_assoc()) {
             $contacto = new Contacto();
             $contacto->set('id', $row['id']);
             $contacto->set('nombre', $row['nombre']);
@@ -35,6 +36,7 @@ class Contacto
             $contacto->set('email', $row['email']);
             array_push($contactos, $contacto);
         }
+        $db->close();
         return $contactos;
     }
 }

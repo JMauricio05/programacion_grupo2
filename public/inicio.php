@@ -1,4 +1,7 @@
 <?php
+require '../models/db/ejemploDb.php';
+require '../models/queries/contactosQueries.php';
+require '../models/entities/contacto.php';
 require '../controllers/contactosController.php';
 require '../views/contactosView.php';
 
