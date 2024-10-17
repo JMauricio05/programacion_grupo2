@@ -39,4 +39,12 @@ class Contacto
         $db->close();
         return $contactos;
     }
+
+    function save(){
+        $sql = ContactosQueries::insert($this);
+        $db = new EjemploDb();
+        $result = $db->query($sql);
+        $db->close();
+        return $result;
+    }
 }

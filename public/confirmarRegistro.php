@@ -7,26 +7,25 @@ require '../views/contactosView.php';
 
 use App\views\ContactosViews;
 
-$contactosView = new ContactosViews();
-
+$contactosViews = new ContactosViews();
+$datosFormulario = $_POST;
+$msg = $contactosViews->getMsgNewContacto($datosFormulario);
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de contactos</title>
-    <link rel="stylesheet" href="css/inicio.css">
+    <title>Confirmar acción</title>
 </head>
 <body>
     <header>
-        <h1>Lista de contactos</h1>
+        <h1>Estado de acción</h1>
     </header>
     <section>
-        <a href="formularioContacto.php">Crear contacto</a>
+        <?php echo $msg;?>
         <br>
-        <?php echo $contactosView->getTable();?>
-        <br>
+        <a href="inicio.php">Volver al inicio</a>
     </section>
 </body>
 </html>

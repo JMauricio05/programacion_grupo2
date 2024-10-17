@@ -20,9 +20,9 @@ class ContactosViews
         if (count($contactos) > 0) {
             foreach ($contactos as $contacto) {
                 $rows .= '<tr>';
-                $rows .= '   <td>'.$contacto->get('nombre').'</td>';
-                $rows .= '   <td>'.$contacto->get('email').'</td>';
-                $rows .= '   <td>'.$contacto->get('telefono').'</td>';
+                $rows .= '   <td>' . $contacto->get('nombre') . '</td>';
+                $rows .= '   <td>' . $contacto->get('email') . '</td>';
+                $rows .= '   <td>' . $contacto->get('telefono') . '</td>';
                 $rows .= '</tr>';
             }
         } else {
@@ -43,5 +43,22 @@ class ContactosViews
         $table .= ' </tbody>';
         $table .= '</table>';
         return $table;
+    }
+
+    function getMsgNewContacto($datosFormulario)
+    {
+        $datos = [
+            "nombre" => $datosFormulario['nombre'],
+            "telefono" => $datosFormulario['telefono'],
+            "email" => $datosFormulario['email'],
+        ];
+        $confirmarAccion = $this->controller->saveContacto($datos);
+        $msg = '<h2>Resultado de la operación</h2>';
+        if ($confirmarAccion) {
+            $msg .= '<p>Datos del contacto guardados.</p>';
+        } else {
+            $msg .= '<p>No se pudo guardar la información del contacto</p>';
+        }
+        return $msg;
     }
 }
