@@ -9,7 +9,9 @@ use App\views\ContactosViews;
 
 $contactosViews = new ContactosViews();
 $datosFormulario = $_POST;
-$msg = $contactosViews->getMsgNewContacto($datosFormulario);
+$msg = empty($datosFormulario['cod'])
+  ? $contactosViews->getMsgNewContacto($datosFormulario)
+  : $contactosViews->getMsgUpdateContacto($datosFormulario);
 ?>
 <!DOCTYPE html>
 <html lang="es">
