@@ -27,6 +27,9 @@ class ContactosViews
                 $rows .= '   <td>';
                 $rows .= '      <a href="formularioContacto.php?cod=' . $id . '">modificar</a>';
                 $rows .= '   </td>';
+                $rows .= '   <td>';
+                $rows .= '      <button>Borrar</button>';
+                $rows .= '   </td>';
                 $rows .= '</tr>';
             }
         } else {
