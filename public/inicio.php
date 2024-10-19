@@ -33,8 +33,14 @@ $modalsView = new ModalsView();
         <br>
         <?php echo $contactosView->getTable(); ?>
         <br>
-        <?php echo $modalsView->getConfirmationModal(); ?>
+        <?php echo $modalsView->getConfirmationModal(
+            'contactoEliminarModal',
+            'contactoForm',
+            'eliminarContacto.php'
+        ); ?>
     </section>
+
+    <script src="js/contactos.js"></script>
 </body>
 
 </html>

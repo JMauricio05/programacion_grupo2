@@ -43,3 +43,7 @@
     grid-area: notBtn;
     width: 60px;
 }
+
+.ocultarModal{
+    display: none;
+}

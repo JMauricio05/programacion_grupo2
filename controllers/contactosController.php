@@ -1,15 +1,19 @@
 <?php
+
 namespace App\controllers;
 
 use App\models\entities\Contacto;
 
-class ContactosController{
+class ContactosController
+{
 
-    function getAllContactos(){
+    function getAllContactos()
+    {
         return Contacto::all();
     }
 
-    function saveContacto($datos){
+    function saveContacto($datos)
+    {
         $contacto = new Contacto();
         $contacto->set('nombre', $datos['nombre']);
         $contacto->set('email', $datos['email']);
@@ -17,16 +21,25 @@ class ContactosController{
         return $contacto->save();
     }
 
-    function getContacto($id){
-        return Contacto::find( $id);
+    function getContacto($id)
+    {
+        return Contacto::find($id);
     }
 
-    function updateContacto($datos){
+    function updateContacto($datos)
+    {
         $contacto = new Contacto();
         $contacto->set('id', $datos['id']);
         $contacto->set('nombre', $datos['nombre']);
         $contacto->set('email', $datos['email']);
         $contacto->set('telefono', $datos['telefono']);
         return $contacto->update();
+    }
+
+    function deleteContacto($id)
+    {
+        $contacto = new Contacto();
+        $contacto->set('id', $id);
+        return $contacto->delete();
     }
 }

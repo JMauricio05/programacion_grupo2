@@ -38,4 +38,10 @@ class ContactosQueries
         $sql .= " where id=$id";
         return $sql;
     }
+
+    static function delete($contacto)
+    {
+        $id = $contacto->get('id');
+        return "delete from contactos where id=$id";
+    }
 }

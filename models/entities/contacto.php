@@ -74,4 +74,13 @@ class Contacto
         $db->close();
         return $result;
     }
+
+    function delete()
+    {
+        $sql = ContactosQueries::delete($this);
+        $db = new EjemploDb();
+        $result = $db->query($sql);
+        $db->close();
+        return $result;
+    }
 }
