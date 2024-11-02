@@ -14,6 +14,7 @@ class ContactoController extends Controller
     {
         $rows = Contacto::all();
         $data = ["data" => $rows];
+        //return response()->json([], 404);
         return response()->json($data, 200);
     }
 
